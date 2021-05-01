@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}HOME{% endblock title %}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .container {
+            background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/static/2.jpg');
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .textClass {
+            position: absolute;
+
+
+        }
+
+        h1 {
+            font-size: 7.1rem;
+            position: relative;
+            top: 61px;
+            left: 364px;
+            transition: 1s;
+        }
+
+        .text {
+            font-size: 3.6rem;
+            position: relative;
+            top: -23px;
+            left: 364px;
+        }
+        .span1::before{
+            content: '';
+            animation: fade linear infinite 7s;
+            color: #ff839e;
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            
+       
+        }
+        @keyframes fade {
+            0%{
+                content: 'a Photographer...'; 
+            }
+            25%{
+                content: 'a Developer...'; 
+            }
+            50%{
+                content: 'a Designer...'; 
+            }
+            75%{
+                content: 'a Freelancer...'; 
+            }
+            100%{
+                content: 'a Editor...';
+            }
+        }
+        .btn{
+            position: relative;
+            left: 364px;
+            top: -69px;
+            border-radius: 42px;
+            padding: 17px 45px;
+            border: 1px solid grey;
+            background-color: transparent;
+            font-size: 1rem;
+            transition: 0.2s ease-in-out;
+            color: #4bcffa;
+            
+        }
+        .btn:hover{
+            background-color: #4bcffa;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid #4bcffa;
+            box-shadow: 0px 0px 10px #4bcffa ,0px 0px 50px #4bcffa , 0px 0px 100px #88e1ff,  0px 0px 120px #88e1ff;
+            outline: none;
+        }
+        .menu{
+            height: 70%;
+            width: 20%;
+            
+            position: relative;
+            top: 120px;
+            left: 10px;
+        }
+        ul li {
+            padding: 20px 5px;
+            top : 25px;
+            
+            list-style: none;
+            
+            
+        }
+        ul{
+            position: absolute;
+            top : 22%;
+            left : -20px;
+        }
+        ul li a{
+            
+            text-decoration: none;
+            width: 150px;
+            color : white;
+        }
+        .menu ul li a i{
+            font-size: 30px;
+            left: -10px;
+            transition: all .3s;
+        }
+        .menu ul li a i:hover{
+            transform: scale(1.4);
+            text-shadow: 0px 0px 10px white,0px 0px 20px white,0px 0px 40px white;
+            
+        }
+        .span2{
+            position: relative;
+            opacity: 0.1;
+            left: 30%;
+            top: 26%;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+        .span2::before{
+            content: '';
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            transition: all 2s ease-in-out;
+        }
+        .span2:hover  {
+            width: 100%;
+            opacity: 1;
+            text-shadow: 0px 0px 10px white,0px 0px 20px white,0px 0px 40px white;
+        }
+        li:hover:nth-child(1){
+            text-shadow: 0px 0px 10px #ef5777,0px 0px 20px #ef5777,0px 0px 80px #ff819c;
+        }
+        li:hover:nth-child(2){
+            text-shadow: 0px 0px 10px #4bcffa,0px 0px 20px #4bcffa,0px 0px 80px #4bcffa;
+        }
+        li:hover:nth-child(4){
+            text-shadow: 0px 0px 10px #ffdd59,0px 0px 20px #ffdd59,0px 0px 80px #ffdd59;
+        }
+        li:hover:nth-child(3){
+            text-shadow: 0px 0px 10px #0be881,0px 0px 20px #0be881,0px 0px 80px #0be881;
+        }
+        h2{
+            margin: 0;
+            padding: 0;
+            font-size: 3.3rem;
+            font-family: 'Courgette', cursive;
+        }
+    
+        .photography {
+                position: absolute;
+                left: 25px;
+                top: 12px;
+                font-size: 1.1rem;
+                font-family: 'Courgette', cursive;
+        }
+        .sec4{
+            width: 99%;
+            height: 13%;
+            
+            bottom: -105px;
+            position: relative;
+        }
+        .fb{
+            position: relative;
+            top: 50%;
+            left: 37%;
+            font-size: 30px;
+            margin: auto 30px;
+            transition: all 0.3s linear;
+        }
+        
+        
+        .fb:hover{
+            text-shadow: 0px 0px 10px #575fcf,0px 0px 40px #575fcf,0px 0px 90px #6971da;
+            border-radius: 50%;
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+        .insta{
+            position: relative;
+            top: 50%;
+            left: 42%;
+            font-size: 30px;
+            margin: auto 30px;
+            transition: all 0.3s linear;
+        }
+        .insta:hover{
+            text-shadow: 0px 0px 10px #ff6b81,0px 0px 30px #ff4757,0px 0px 70px #ff6b81;
+            border-radius: 50%;
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+        .you{
+            position: relative;
+            top: 50%;
+            left: 47%;
+            font-size: 30px;
+            margin: auto 30px;
+            transition: all 0.3s linear;
+        }
+        .you:hover{
+            text-shadow: 0px 0px 10px #ff4757,0px 0px 40px #ff4757,0px 0px 90px #ff4757;
+            border-radius: 50%;
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .copyright{
+            right: 0;
+            position: absolute;
+            bottom: -12px;
+            font-size: 12px;
+        }
+      @media only screen and (max-width: 411px) {
+        .menu ul li a i{
+            font-size: 24px;
+            position: relative;
+            left: -20px;
+          }
+          .span2{
+            position: relative;
+            opacity: 0.1;
+            left: 30%;
+            top: -20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+          }
+          h1{
+                font-size: 4.6rem;
+                position: relative;
+                top: 61px;
+                left: 150px;
+                transition: 1s;
+            }
+            .text {
+                font-size: 2.1rem;
+                position: relative;
+                top: 20px;
+                left: 150px;
+            }
+            .span1::before{
+                
+                font-size: 1.9rem;
+                position: relative;
+                top : 40px;
+                left: -80px;
+            }
+            .btn{
+                position: relative;
+                left: 140px;
+                top: 40px;
+                border-radius: 42px;
+                padding: 17px 35px;
+            }
+            .sec4{
+                position: relative;
+                left : -85px;
+                top: 80px;
+            }
+            p{
+                position: relative;
+                left: 200px;
+                font-size: 10px;
+                top: 72px;
+                margin-top: 20px;
+            }
+
+      }
+
+
+      @media only screen and (max-width: 375px) {
+        .menu ul li a i{
+            font-size: 24px;
+            position: relative;
+            left: -20px;
+          }
+          .span2{
+            position: relative;
+            opacity: 0.1;
+            left: 30%;
+            top: -20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+          }
+          h1{
+                font-size: 4.3rem;
+                position: relative;
+                top: 61px;
+                left: 150px;
+                transition: 1s;
+            }
+            .text {
+                font-size: 1.9rem;
+                position: relative;
+                top: 20px;
+                left: 150px;
+            }
+            .span1::before{
+                
+                font-size: 1.7rem;
+                position: relative;
+                top : 40px;
+                left: -75px;
+            }
+            .btn{
+                position: relative;
+                left: 140px;
+                top: 40px;
+                border-radius: 35px;
+                padding: 10px 35px;
+            }
+            .sec4{
+                position: relative;
+                left : -85px;
+                top: 80px;
+            }
+            p{
+                position: relative;
+                left: 200px;
+                font-size: 10px;
+                top: 72px;
+                margin-top: 20px;
+            }
+
+      }
+
+
+      @media only screen and (max-width: 1024px) {
+        .menu ul li a i{
+            font-size: 24px;
+            position: relative;
+            left: -27px;
+          }
+          .span2{
+            position: relative;
+            opacity: 0.1;
+            left: 30%;
+            top: -20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+          }
+          h1{
+                font-size: 8.6rem;
+                position: relative;
+                top: 70px;
+                left: 300px;
+                transition: 1s;
+            }
+            .text {
+                font-size: 5.5rem;
+                position: relative;
+                top: -30px;
+                left: 300px;
+            }
+            .span1::before{
+                
+                font-size: 4.9rem;
+                position: relative;
+                top : 80px;
+                left: -200px;
+            }
+            .btn{
+                position: relative;
+                left: 300px;
+                top: -20px;
+                border-radius: 40px;
+                padding: 27px 80px;
+            }
+            .sec4{
+                position: relative;
+                left : -65px;
+                bottom: -180px;
+            }
+            p{
+                position: relative;
+                left: 420px;
+                font-size: 25px;
+                top: 110px;
+                margin-top: 36px;
+            }
+
+      }
+
+      @media only screen and (max-width: 768px) {
+        .menu ul li a i{
+            font-size: 20px;
+            position: relative;
+            left: -27px;
+          }
+          .span2{
+            position: relative;
+            opacity: 0.1;
+            left: 20%;
+            top: 0px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+          }
+          h1{
+                font-size: 7.6rem;
+                position: relative;
+                top: 61px;
+                left: 230px;
+                transition: 1s;
+            }
+            .text {
+                font-size: 4rem;
+                position: relative;
+                top: -30px;
+                left: 230px;
+            }
+            .span1::before{
+                
+                font-size: 3.5rem;
+                position: relative;
+                top : 60px;
+                left: -150px;
+            }
+            .btn{
+                position: relative;
+                left: 220px;
+                top: -20px;
+                border-radius: 45px;
+                padding: 25px 60px;
+            }
+            .sec4{
+                position: relative;
+                left : -50px;
+                top: 170px;
+            }
+            p{
+                position: relative;
+                left: 325px;
+                font-size: 12px;
+                top: 72px;
+                margin-top: 35px;
+            }
+
+      }
+
+
+      @media only screen and (max-width: 1024px) {
+        .menu ul li a i{
+            font-size: 45px;
+            position: relative;
+            left: -20px;
+          }
+          .span2{
+            position: relative;
+            opacity: 0.1;
+            left: 20%;
+            top: 0px;
+            font-size: 20px;
+          }
+          h1{
+                font-size: 8.6rem;
+                position: relative;
+                top: 90px;
+                left: 300px;
+                transition: 1s;
+            }
+            .text {
+                font-size: 4rem;
+                position: relative;
+                top: -30px;
+                left: 300px;
+            }
+            .span1::before{
+                
+                font-size: 4.2rem;
+                position: relative;
+                top : 80px;
+                left: -150px;
+            }
+            .btn{
+                position: relative;
+                left: 280px;
+                top: -20px;
+                border-radius: 45px;
+                padding: 25px 70px;
+                margin-top: 20px;
+                font-size: 1.4rem;
+            }
+            .sec4{
+                position: relative;
+                left : -50px;
+                top: 200px;
+                font-size: 30px;
+                
+            }
+            p{
+                position: relative;
+                left: 425px;
+                font-size: 12px;
+                top: 92px;
+                margin-top: 45px;
+            }
+            
+            
+
+      }
+            
+            
+           
+        
+    </style>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="textClass">
+            <h2>S<p class="photography">ouvik's Photography</p></h2>
+            <h1>hi,</h1>
+            <p class="text textnew">I am <span class="span1"></span> 
+            </p>
+            <button class="btn" type="submit"><a href='contact'>Contact Us</a></button>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href=""><i class="fa fa-home"></i> <span class="span2">HOME</span> </a></li>
+                <li><a href="/explore"><i class="fa fa-globe"></i><span class="span2">EXPLORE</span>  </a></li>
+                <li><a href="/contact"><i class="fa fa-id-card"></i><span class="span2">CONTACT</span>  </a></li>
+                <li><a href="/about"><i class="fa fa-user"></i> <span class="span2">ABOUT US</span> </a></li>
+            </ul>
+        </div>
+        <div class="sec4">
+            
+                <a href="#"><i class="fa fa-facebook fb"></i></a>
+                <a href="#"><i class="fa fa-instagram insta"></i></a>
+                <a href="#"><i class="fa fa-youtube you"></i></a>
+                <p class="copyright">© 2020-2021 Souvik Saha. All Rights Reserved.</p>
+         
+        </div>
+ 
+    </div>
+    
+
+</body>
+
+</html>
